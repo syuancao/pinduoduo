@@ -8,6 +8,7 @@ import { TopMenu } from './components';
 })
 
 export class AppComponent {
+  scrollableTabBgColor = 'red'
   topMenus: TopMenu[] = [  
     {
       title: '热门',
@@ -79,7 +80,10 @@ export class AppComponent {
     }
   ] 
 
-  handleTabSelected(tabMenu: TopMenu) {
-    console.log(tabMenu)
+  handleTabSelected(topMenu: TopMenu) {
+    const colors = ['red', 'blue', 'black']
+    const idx = Math.floor(Math.random() * 3)
+    this.scrollableTabBgColor = colors[idx]
+    console.log(topMenu)
   }
 }
