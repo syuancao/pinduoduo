@@ -4,4 +4,5 @@
  * 2. 更好的封装，隔离内部变化对外部的影响
  */
 export * from './scrollable-tab';
-export * from './image-slider'
+export * from './image-slider';
+export * from './horizontal-grid';

@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
-import { clearInterval } from 'timers';
 
 export interface ImageSlider {
   imgUrl: string;
