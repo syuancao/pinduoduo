@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu } from './components';
+import { ImageSlider, TopMenu } from './components';
 
 @Component({
   selector: 'app-root',
@@ -79,6 +79,8 @@ export class AppComponent {
       link: ''
     }
   ] 
+
+  imageSliders: ImageSlider[] = []
 
   handleTabSelected(topMenu: TopMenu) {
     const colors = ['red', 'blue', 'black']
