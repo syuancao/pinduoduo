@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ImageSlider, TopMenu } from './components';
+import { Component, ViewChild } from '@angular/core';
+import { ImageSlider, ImageSliderComponent, TopMenu } from './components';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { ImageSlider, TopMenu } from './components';
 })
 
 export class AppComponent {
+  @ViewChild(ImageSliderComponent) imgSlider: ImageSliderComponent
   scrollableTabBgColor = 'red'
   topMenus: TopMenu[] = [  
     {
@@ -87,5 +88,9 @@ export class AppComponent {
     const idx = Math.floor(Math.random() * 3)
     this.scrollableTabBgColor = colors[idx]
     console.log(topMenu)
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.imgSlider)
   }
 }

@@ -26,7 +26,9 @@ export class ScrollableTabComponent implements OnInit, OnChanges, AfterContentIn
   @Input() indicatorColor = 'brown'
   @Output() tabSelected = new EventEmitter()
   /**
-   * 构造函数永远首先被调用
+   * 构造函数永远首先被调用，构造函数是建立这个类的实例
+   * 之所以我们没有显性的使用 new ScrollableTabComponent
+   * 是因为系统框架帮我们做了这个
    */
   constructor() {
     console.log('组件构造调用')
