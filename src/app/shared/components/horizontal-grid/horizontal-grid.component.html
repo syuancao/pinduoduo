@@ -5,4 +5,5 @@
     [value]="username"
     (input)="username = $event.target.value"
 />
-<span>你好，{{ username }}</span>
+<p (click)="handleClick()">你好 {{username}}</p>
+{{ result }}
