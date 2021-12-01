@@ -1,9 +1,5 @@
-<!-- <input type="text" [(ngModel)]="username" />
-<span>你好， {{ username }}</span> -->
-<input 
-    type="text"
-    [value]="username"
-    (input)="username = $event.target.value"
-/>
-<p (click)="handleClick()">你好 {{username}}</p>
-{{ result }}
+<!--指令所在的元素叫宿主-->
+<div appGridItem>
+  <img src="" alt="" appGridItemImage>
+  <span appGridItemTitle></span>
+</div>
