@@ -1,5 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Confirmable, Emoji } from '../../decorators';
+
+export interface Channel {
+  id: number;
+  icon: string;
+  title: string;
+  link: string
+}
 
 @Component({
   selector: 'app-horizontal-grid',
@@ -7,7 +13,9 @@ import { Confirmable, Emoji } from '../../decorators';
   styleUrls: ['./horizontal-grid.component.css']
 })
 export class HorizontalGridComponent implements OnInit {
+  channels: Channel[] = [
 
+  ]
   constructor() { }
 
   ngOnInit(): void {
